@@ -13,20 +13,30 @@
 <title> Como fazer um modal</title>
 </head>
 <body>
+<div class="container">
+<h1>Excluir um produto</h1>
+<p>Preencha as informações abaixo para a exclusão permanente do produto</p>
 
- <h1>Modal</h1>
-  
- <button id='abrir-modal' onclick=Abrir()> Abrir</button>
+<input type="text" name="nome" id="nome_produto" placeholder="Insira o nome desse item">
+<input type="number" name="numero" id="número_produto" placeholder="Insira o ID desse item">
+<input type="password" name="senha" id="senha_user" placeholder="Insira sua senha">
+
+
+
+ <button id='abrir-modal' onclick=Abrir()> Continuar</button>
  
  <div id='modal'> 
  <div id= 'modal-body'>
  <div id= 'modal-header'> <h2> Título do seu modal </h2>
  <button id= 'fechar-modal' onclick = FecharModal()> &times; </button>
  </div>
- <div id= 'modal-text'> <p> Aqui é o conteúdo do seu modal </p> </div> 
+ <div id= 'modal-text'> <p> Deseja realmente deletar esse produto <b>permanentemente</b> dessa plataforma?
+ </p> </div> 
+ <button id= 'excluir_produto' onclick = FecharModal()> Sim, desejo continuar </button>
+ <button id= 'nao_excluir_produto' onclick = FecharModal()> Não </button>
  </div>
  </div>
-
+</div>
  <script src="modal.js"></script>
 </body>
 </html>
