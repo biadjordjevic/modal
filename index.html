@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Como fazer um modal</title>
+</head>
+<body>
+
+ <h1>Modal</h1>
+  
+ <button id='abrir-modal' onclick=Abrir()> Abrir</button> 
+ <!-- Responsável por abrir e exibir o modal -->
+ 
+ <div id='modal'> 
+<!-- serve para destacar o overlay da página principal, 
+ seja com efeito de blur ou escurecendo o fundo -->
+
+ <div id= 'modal-body'>
+<!-- onde o conteúdo vai ser armazenado para a exibição; um contâiner -->
+
+ <div id= 'modal-header'> <h2> Título do seu modal </h2>
+ 
+
+ <button id= 'fechar-modal' onclick = FecharModal()> &times; </button>
+<!-- botão que permite o usuário fechar o modal. "&times", 
+é um código especial que representaria o sinal de multiplicação ('X') -->
+
+ </div>
+ <div id= 'modal-text'> <p> Aqui é o conteúdo do seu modal </p> </div> 
+ </div>
+ </div>
+ 
+ <style>
+ 
+ *{
+ font-family: arial;
+ color: #2B2B2B;
+padding: 5px;
+ }
+ 
+ #modal{
+  display: none; /*não deixa o elemento vísivel */
+ position: fixed;
+ height: 100%;
+ width: 100%;
+ z-index: 2;  /*propriedade que envolve camadas; sobrepõe a página principal */
+ background-color:rgba(0,0,0,0.4);
+overflow: auto;  /*permite o scroll, caso o conteúdo ultrapasse  */
+ padding-top: 100px; 
+  left: 0;
+  top: 0;
+ }
+ /* escurece o a página principal para seu destaque; 
+ preenche toda a tela e é padrão quando se faz um modal */
+ 
+ #modal-body{
+ background-color: white;
+ width: 30%;
+padding: 20px;
+z-index: 5; /* coloca esse contâiner sobreposto ao fundo */
+margin: auto;
+border-radius: 20px;
+ }
+ 
+ 
+ #modal-header{
+ display: flex;
+justify-content: space-between;
+align-items: center;
+border-bottom: 1px solid #888;
+ }
+ 
+ p{
+ margin: auto;
+ color: black
+ }
+ 
+ h2{
+ color: #888
+ }
+ 
+ button{
+ height: 40px;
+ width: 60px;
+ border: 1px red; 
+ border-radius: 20px;
+ background-color: #888;
+ color: black
+ 
+ }
+ 
+ </style>
+ 
+ 
+ <script> 
+ const abrirModal = document.getElementById('abrir-modal')
+ const fecharModal = document.getElementById ('fechar-modal')
+ const modal = document.getElementById ('modal')
+ 
+function Abrir(){
+ modal.style.display = 'block';
+//  acessa o estilo pelo próprio js; muda a propriedade do display para block
+ }
+ 
+ function FecharModal(){
+ modal.style.display = 'none';
+ }
+ 
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+// event é um objeto que indica o acontecimento de algo, e uma das suas
+//  propriedades é event.target, o elemento em que aquilo ocorreu
+  }
+}
+ 
+ 
+ </script>
+
+</body>
+</html><!DOCTYPE html>

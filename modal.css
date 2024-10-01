@@ -1,6 +1,11 @@
-body{
+html, body {
+    height: 100%; 
+    margin: 0; 
+    padding: 0; 
     font-family: arial;
     color: #2B2B2B;
+    overflow-x: hidden;
+    
    
     }
     
@@ -24,6 +29,7 @@ body{
    z-index: 5;
    margin: auto;
    border-radius: 20px;
+
     }
     
     #modal-header{
@@ -34,8 +40,8 @@ body{
     }
     
     p{
-    margin: auto;
-    color: black
+    margin: 5px;
+    color: black;
     }
     
     h2{
@@ -45,7 +51,7 @@ body{
     button{
     height: 40px;
     width: auto;
-    border: 1px red; 
+    border:none; 
     border-radius: 20px;
     background-color: #888;
     color: black;
@@ -54,31 +60,38 @@ body{
     }
 
     input{
-        display: flex;
-
+     display: flex;
         background-color: rgb(255, 255, 255);
-        color: rgb(122, 122, 122);
-        border: 0 solid red;
+        color: rgb(170, 170, 170);
+        border: 1px solid rgb(85, 85, 85);
         border-radius: 20px;
         height: 20px;
         width: auto;
         padding: 15px;
         margin-top: 10px;
+        font-size: medium;
+      
         }
 
+.container.input{
+    display: flex;
+}
+
 .container{
-    border: 5px  rgb(255, 255, 255); 
+
+    border: 5px solid rgb(255, 255, 255);
     border-radius: 10px;
-    background-color: rgba(99, 99, 99, 0.555);
     margin: 10px; 
     padding: 15px; 
+    height:93%;
+    margin-left: 40px ;
    
 }
 
 #excluir_produto{
     background-color: rgba(252, 18, 18, 0.377);
     color: rgb(0, 0, 0);
-    border: 0 solid red;
+    border: none;
     border-radius: 30px;
     height: auto;
     width: auto;
@@ -88,7 +101,7 @@ body{
     #nao_excluir_produto{
         background-color: rgba(12, 139, 18, 0.377);
         color: rgb(0, 0, 0);
-        border: 0 solid red;
+        border: none;
         border-radius: 30px;
         height: auto;
         width: auto;
@@ -100,7 +113,7 @@ body{
     
             background-color: rgba(177, 177, 177, 0.541);
             color: rgb(0, 0, 0);
-            border: 0 solid red;
+            border: none;
             border-radius: 30px;
             height: 30px;
             width:30px;
@@ -109,5 +122,27 @@ body{
         
     }
 
-  
+
+    ul li{
+        display: inline;
+        margin-top: 15px;
+       
+        }
+        
+        a {
+        text-decoration: none;
+        display: inline;
+        color: #ffffff;
+        font-size:larger;
+        margin-top: 15px;
+        margin-left: 40px ;
+        font-size: larger;
+        }
+        
+        nav{
+        background-color: #535353;
+        height: 65px;
+         display:flex;
+        }
+         
         

@@ -20,6 +20,10 @@ window.onclick = function(event) {
   }
 }
 
-function Excluir(){
-  
-}
+// function Excluir(){
+//   modal.style.display = "none";
+//     var nomeLivro = document.getElementById('nome_produto')
+//     var idLivro = document.getElementById('numero_produto')
+//     var senha = document.getElementById('senha_user')
+//     nomeLivro.value, idLivro.value, senha.value =""
+//     }
